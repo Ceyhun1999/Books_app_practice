@@ -1,30 +1,30 @@
 # Books_app_practice
 
-Учебное SwiftUI-приложение для работы с книгами: список, избранное, добавление и детальный экран.
+A practice SwiftUI app for managing books: a list, favorites, adding a book, and a detail screen.
 
-## Что освоено
+## What I learned
 
-- **@State** — локальное состояние view (поля формы в `AddBookView`, флаг показа sheet).
-- **@Binding** — двусторонняя передача значения в дочерние view (`Book` в `BookRowView` и `BookDetailView`).
-- **ObservableObject / @ObservedObject / @StateObject** — логика в `BooksViewModel`; `MainTabView` владеет ею через `@StateObject`, дочерние экраны получают её через `@ObservedObject`.
-- **@Environment** — системные значения окружения, например `dismiss` для закрытия экрана.
-- **NavigationStack / NavigationLink** — переходы между списком книг и экраном деталей.
-- **TabView (TabBar)** — нижняя панель вкладок: «Книги» и «Избранное» (`MainTabView`).
-- **swipeActions** — свайп по строке списка для удаления книги.
+- **@State**: local view state (form fields in `AddBookView`, the sheet presentation flag).
+- **@Binding**: two-way value passing to child views (`Book` in `BookRowView` and `BookDetailView`).
+- **ObservableObject / @ObservedObject / @StateObject**: logic lives in `BooksViewModel`; `MainTabView` owns it via `@StateObject`, and child screens receive it via `@ObservedObject`.
+- **@Environment**: system environment values, such as `dismiss` for closing a screen.
+- **NavigationStack / NavigationLink**: navigation between the book list and the detail screen.
+- **TabView (tab bar)**: bottom tab bar with "Books" and "Favorites" tabs (`MainTabView`).
+- **swipeActions**: swipe on a list row to delete a book.
 
-## Структура
+## Structure
 
-| Файл | Назначение |
-|------|-----------|
-| `Book.swift` | Модель книги |
-| `BooksViewModel.swift` | Данные и логика |
-| `BooksView.swift` | Список книг |
-| `BookRowView.swift` | Строка списка |
-| `BookDetailView.swift` | Детали книги |
-| `AddBookView.swift` | Добавление книги |
-| `FavoritesView.swift` | Избранное |
+| File | Purpose |
+|------|---------|
+| `Book.swift` | Book model |
+| `BooksViewModel.swift` | Data and logic |
+| `BooksView.swift` | Book list |
+| `BookRowView.swift` | List row |
+| `BookDetailView.swift` | Book details |
+| `AddBookView.swift` | Add a book |
+| `FavoritesView.swift` | Favorites |
 | `MainTabView.swift` | Tab bar |
 
-## Запуск
+## Running
 
-Откройте `books_practice_.xcodeproj` в Xcode и запустите на симуляторе iOS.
+Open `books_practice_.xcodeproj` in Xcode and run it on an iOS simulator.
